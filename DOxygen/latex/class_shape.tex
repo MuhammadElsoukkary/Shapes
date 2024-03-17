@@ -1,0 +1,224 @@
+\hypertarget{class_shape}{}\section{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+
+
+Represents a geometric shape.  
+
+
+
+
+{\ttfamily \#include $<$Shape.\+h$>$}
+
+Inheritance diagram for Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shape}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_aaa8d87171e65e0d8ba3c5459978992a7}{Shape}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{class_shape}{Shape}} class. Initializes name and colour to default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shape_ad735b927c63c190803e2b9af27e4c25d}{Shape}} (string name, string colour)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for \mbox{\hyperlink{class_shape}{Shape}} class. Initializes name and colour with provided values. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_a7af8e23f8cce0f52e526b45b45818917}{Get\+Name}} (void)
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the shape. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_ada61754901b5db24dad569c5a54a567b}{Get\+Colour}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the colour of the shape. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_af47e082e8a48ae1c083d3acf0d7a059f}{Set\+Name}} (string name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the shape. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_ae7f2ceebc1f1268cd733e75746046818}{Set\+Colour}} (string colour)
+\begin{DoxyCompactList}\small\item\em Sets the colour of the shape. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_shape_a27f450f44fc4f9a444600b5df6754c5f}{Perimeter}} (void) const
+\begin{DoxyCompactList}\small\item\em Calculates the perimeter of the shape. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_shape_ad0c742cb695fdb3e575a31bcd4784c26}{Area}} (void) const
+\begin{DoxyCompactList}\small\item\em Calculates the area of the shape. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_shape_a60aea90f45ea0f6d60cd749918728e16}{Overall\+Dimension}} (void) const
+\begin{DoxyCompactList}\small\item\em Retrieves the overall dimension of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_shape_afcf3b83c2ab303d26b2d2c2ea616d495}\label{class_shape_afcf3b83c2ab303d26b2d2c2ea616d495}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\Hypertarget{class_shape_a7a879731b934ef89f1d08048d63754ca}\label{class_shape_a7a879731b934ef89f1d08048d63754ca}} 
+std\+::string {\bfseries colour}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a geometric shape. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shape_aaa8d87171e65e0d8ba3c5459978992a7}\label{class_shape_aaa8d87171e65e0d8ba3c5459978992a7}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \mbox{\hyperlink{class_shape}{Shape}} class. Initializes name and colour to default values. 
+
+Default constructor for \mbox{\hyperlink{class_shape}{Shape}} class. Initializes name to \char`\"{}\+Unknown\char`\"{} and colour to \char`\"{}undefined\char`\"{}. \mbox{\Hypertarget{class_shape_ad735b927c63c190803e2b9af27e4c25d}\label{class_shape_ad735b927c63c190803e2b9af27e4c25d}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{colour }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for \mbox{\hyperlink{class_shape}{Shape}} class. Initializes name and colour with provided values. 
+
+Parameterized constructor for \mbox{\hyperlink{class_shape}{Shape}} class. Sets the name and colour of the shape if valid inputs are provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the shape. \\
+\hline
+{\em colour} & The colour of the shape. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shape_ad0c742cb695fdb3e575a31bcd4784c26}\label{class_shape_ad0c742cb695fdb3e575a31bcd4784c26}} 
+\index{Shape@{Shape}!Area@{Area}}
+\index{Area@{Area}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily float Shape\+::\+Area (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the area of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The area of the shape. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_circle_ae720283333ec4b0336f3ad6ff8bf20ce}{Circle}}, and \mbox{\hyperlink{class_square_a514f98666ebe6c9d43bc454e3d5819a4}{Square}}.
+
+\mbox{\Hypertarget{class_shape_ada61754901b5db24dad569c5a54a567b}\label{class_shape_ada61754901b5db24dad569c5a54a567b}} 
+\index{Shape@{Shape}!GetColour@{GetColour}}
+\index{GetColour@{GetColour}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{GetColour()}{GetColour()}}
+{\footnotesize\ttfamily string Shape\+::\+Get\+Colour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the colour of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The colour of the shape. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a7af8e23f8cce0f52e526b45b45818917}\label{class_shape_a7af8e23f8cce0f52e526b45b45818917}} 
+\index{Shape@{Shape}!GetName@{GetName}}
+\index{GetName@{GetName}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily string Shape\+::\+Get\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the name of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The name of the shape. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a60aea90f45ea0f6d60cd749918728e16}\label{class_shape_a60aea90f45ea0f6d60cd749918728e16}} 
+\index{Shape@{Shape}!OverallDimension@{OverallDimension}}
+\index{OverallDimension@{OverallDimension}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{OverallDimension()}{OverallDimension()}}
+{\footnotesize\ttfamily float Shape\+::\+Overall\+Dimension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retrieves the overall dimension of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The overall dimension of the shape. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_circle_a078579746ec5d8443219f0fa2ce6373e}{Circle}}, and \mbox{\hyperlink{class_square_abf97ea232b41e2060eff7a3d8b1b60d2}{Square}}.
+
+\mbox{\Hypertarget{class_shape_a27f450f44fc4f9a444600b5df6754c5f}\label{class_shape_a27f450f44fc4f9a444600b5df6754c5f}} 
+\index{Shape@{Shape}!Perimeter@{Perimeter}}
+\index{Perimeter@{Perimeter}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{Perimeter()}{Perimeter()}}
+{\footnotesize\ttfamily float Shape\+::\+Perimeter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the perimeter of the shape. 
+
+\begin{DoxyReturn}{Returns}
+The perimeter of the shape. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_circle_acbb15d0cc28936ddd847802d81ba95c7}{Circle}}, and \mbox{\hyperlink{class_square_a460111c0c374f9864d00316dcfe35dba}{Square}}.
+
+\mbox{\Hypertarget{class_shape_ae7f2ceebc1f1268cd733e75746046818}\label{class_shape_ae7f2ceebc1f1268cd733e75746046818}} 
+\index{Shape@{Shape}!SetColour@{SetColour}}
+\index{SetColour@{SetColour}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{SetColour()}{SetColour()}}
+{\footnotesize\ttfamily bool Shape\+::\+Set\+Colour (\begin{DoxyParamCaption}\item[{string}]{colour }\end{DoxyParamCaption})}
+
+
+
+Sets the colour of the shape. 
+
+Sets the colour of the shape if valid.
+
+
+\begin{DoxyParams}{Parameters}
+{\em colour} & The colour to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the colour was set successfully, otherwise false.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em colour} & The colour to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if colour was set successfully, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_af47e082e8a48ae1c083d3acf0d7a059f}\label{class_shape_af47e082e8a48ae1c083d3acf0d7a059f}} 
+\index{Shape@{Shape}!SetName@{SetName}}
+\index{SetName@{SetName}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily bool Shape\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the shape. 
+
+Sets the name of the shape if valid.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the name was set successfully, otherwise false.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if name was set successfully, otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/muham/\+One\+Drive/\+Desktop/\+O\+O\+P/\+Shapes/\+Shapes/\mbox{\hyperlink{_shape_8h}{Shape.\+h}}\item 
+C\+:/\+Users/muham/\+One\+Drive/\+Desktop/\+O\+O\+P/\+Shapes/\+Shapes/\mbox{\hyperlink{_shape_8cpp}{Shape.\+cpp}}\end{DoxyCompactItemize}

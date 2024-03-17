@@ -1,16 +1,18 @@
+
 /* -- FILEHEADER COMMENT --
     NAME    :   myShape.cpp
     PURPOSE :   This program manages geometric shapes like squares and circles.
                 Users can create, modify, and visualize shapes, specifying properties
                 such as colour and dimensions. It includes classes like Square and Circle
                 derived from the Shape class.
+    AUTHOR  :   Muhammad Elsoukkary
+    DATE    :  2024-03-04
+    LICENSE :   [None]
 */
 
 #include "Shape.h" // Include the Shape class header
 #include "Circle.h" // Include the Circle class header
 #include "Square.h" // Include the Square class header
-#include "Circle.h"
-
 
 using namespace std;
 
@@ -44,7 +46,6 @@ int main(void) {
         cout << "Invalid choice. Please enter 1 for circle or 2 for square: ";
     }
 
-
     string colour;
     cout << "Enter the colour of the shape: ";
     cin >> colour;
@@ -76,7 +77,6 @@ int main(void) {
 
     return 0;
 }
-
 
 /**
  * @brief Function to get an integer from user input

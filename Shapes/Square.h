@@ -2,70 +2,52 @@
 
 #pragma once
 
-/// <summary>
-/// Square class represents a square shape.
-/// </summary>
-class Square : public Shape
-{
+/// \file Square.h
+/// \brief Contains the declaration of the Square class.
+
+/// \class Square
+/// \brief Represents a square shape.
+class Square : public Shape {
 private:
     float sideLength; ///< Length of each side of the square
 
 public:
-    /// <summary>
-    /// Default constructor for Square class.
+    /// \brief Default constructor for Square class.
     /// Initializes the Square with default values.
-    /// </summary>
     Square();
 
-    /// <summary>
-    /// Parameterized constructor for Square class.
+    /// \brief Parameterized constructor for Square class.
     /// Initializes the Square with the specified colour and side length.
-    /// </summary>
-    /// <param name="colour">The colour of the Square.</param>
-    /// <param name="sideLength">The side length of the Square.</param>
+    /// \param colour The colour of the Square.
+    /// \param sideLength The side length of the Square.
     Square(std::string colour, float sideLength);
 
-    /// <summary>
-    /// Destructor for Square class.
-    /// </summary>
+    /// \brief Destructor for Square class.
     ~Square();
 
-    /// <summary>
-    /// Retrieves the side length of the Square.
-    /// </summary>
-    /// <returns>The side length of the Square.</returns>
+    /// \brief Retrieves the side length of the Square.
+    /// \return The side length of the Square.
     float GetSideLength() const;
 
-    /// <summary>
-    /// Sets the side length of the Square.
-    /// </summary>
-    /// <param name="sideLength">The side length to set.</param>
-    /// <returns>True if the side length was set successfully, otherwise false.</returns>
+    /// \brief Sets the side length of the Square.
+    /// \param sideLength The side length to set.
+    /// \return True if the side length was set successfully, otherwise false.
     bool SetSideLength(float sideLength);
 
-    /// <summary>
-    /// Displays information about the Square.
-    /// </summary>
+    /// \brief Displays information about the Square.
     void Show() const;
 
-    /// <summary>
-    /// Calculates the perimeter of the Square.
-    /// </summary>
-    /// <returns>The perimeter of the Square.</returns>
+    /// \brief Calculates the perimeter of the Square.
+    /// \return The perimeter of the Square.
     float Perimeter() const override;
 
-    /// <summary>
-    /// Calculates the area of the Square.
-    /// </summary>
-    /// <returns>The area of the Square.</returns>
+    /// \brief Calculates the area of the Square.
+    /// \return The area of the Square.
     float Area() const override;
 
-    /// <summary>
-    /// Retrieves the overall dimension of the Square.
-    /// </summary>
-    /// <returns>The overall dimension of the Square.</returns>
+    /// \brief Retrieves the overall dimension of the Square.
+    /// \return The overall dimension of the Square.
     float OverallDimension() const override;
 };
-
 
 

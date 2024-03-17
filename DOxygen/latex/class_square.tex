@@ -1,0 +1,171 @@
+\hypertarget{class_square}{}\section{Square Class Reference}
+\label{class_square}\index{Square@{Square}}
+
+
+Represents a square shape.  
+
+
+
+
+{\ttfamily \#include $<$Square.\+h$>$}
+
+Inheritance diagram for Square\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_square}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_square_a3dc7ff9aefc2725172b5d3153973d243}\label{class_square_a3dc7ff9aefc2725172b5d3153973d243}} 
+\mbox{\hyperlink{class_square_a3dc7ff9aefc2725172b5d3153973d243}{Square}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{class_square}{Square}} class. Initializes the \mbox{\hyperlink{class_square}{Square}} with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_square_ad1c9965627cb2f69fea114f1031e99cb}{Square}} (std\+::string colour, float \mbox{\hyperlink{class_square_a90b0c01a55a5f061e96b2d88724b130d}{side\+Length}})
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for \mbox{\hyperlink{class_square}{Square}} class. Initializes the \mbox{\hyperlink{class_square}{Square}} with the specified colour and side length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_square_a90af7ce1060cff7b717ceddb333846b8}{$\sim$\+Square}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{class_square}{Square}} class. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_square_a84b60d7f474609a2772a1d4213bcc7d9}{Get\+Side\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the side length of the \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_square_a2ca9671502705098ec6dac551d437ebe}{Set\+Side\+Length}} (float \mbox{\hyperlink{class_square_a90b0c01a55a5f061e96b2d88724b130d}{side\+Length}})
+\begin{DoxyCompactList}\small\item\em Sets the side length of the \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_square_a611a452eb35f4426bc508c44a38ceaa2}\label{class_square_a611a452eb35f4426bc508c44a38ceaa2}} 
+void \mbox{\hyperlink{class_square_a611a452eb35f4426bc508c44a38ceaa2}{Show}} () const
+\begin{DoxyCompactList}\small\item\em Displays information about the \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_square_a460111c0c374f9864d00316dcfe35dba}{Perimeter}} () const override
+\begin{DoxyCompactList}\small\item\em Calculates the perimeter of the \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_square_a514f98666ebe6c9d43bc454e3d5819a4}{Area}} () const override
+\begin{DoxyCompactList}\small\item\em Calculates the area of the \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_square_abf97ea232b41e2060eff7a3d8b1b60d2}{Overall\+Dimension}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the overall dimension of the \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_square_a90b0c01a55a5f061e96b2d88724b130d}\label{class_square_a90b0c01a55a5f061e96b2d88724b130d}} 
+float \mbox{\hyperlink{class_square_a90b0c01a55a5f061e96b2d88724b130d}{side\+Length}}
+\begin{DoxyCompactList}\small\item\em Length of each side of the square. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a square shape. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_square_ad1c9965627cb2f69fea114f1031e99cb}\label{class_square_ad1c9965627cb2f69fea114f1031e99cb}} 
+\index{Square@{Square}!Square@{Square}}
+\index{Square@{Square}!Square@{Square}}
+\subsubsection{\texorpdfstring{Square()}{Square()}}
+{\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}\item[{std\+::string}]{colour,  }\item[{float}]{side\+Length }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for \mbox{\hyperlink{class_square}{Square}} class. Initializes the \mbox{\hyperlink{class_square}{Square}} with the specified colour and side length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em colour} & The colour of the \mbox{\hyperlink{class_square}{Square}}. \\
+\hline
+{\em side\+Length} & The side length of the \mbox{\hyperlink{class_square}{Square}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_square_a90af7ce1060cff7b717ceddb333846b8}\label{class_square_a90af7ce1060cff7b717ceddb333846b8}} 
+\index{Square@{Square}!````~Square@{$\sim$Square}}
+\index{````~Square@{$\sim$Square}!Square@{Square}}
+\subsubsection{\texorpdfstring{$\sim$Square()}{~Square()}}
+{\footnotesize\ttfamily Square\+::$\sim$\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{class_square}{Square}} class. 
+
+Destructor for \mbox{\hyperlink{class_square}{Square}} class. Displays a message when the \mbox{\hyperlink{class_square}{Square}} object is destroyed. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_square_a514f98666ebe6c9d43bc454e3d5819a4}\label{class_square_a514f98666ebe6c9d43bc454e3d5819a4}} 
+\index{Square@{Square}!Area@{Area}}
+\index{Area@{Area}!Square@{Square}}
+\subsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily float Square\+::\+Area (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the area of the \mbox{\hyperlink{class_square}{Square}}. 
+
+\begin{DoxyReturn}{Returns}
+The area of the \mbox{\hyperlink{class_square}{Square}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_ad0c742cb695fdb3e575a31bcd4784c26}{Shape}}.
+
+\mbox{\Hypertarget{class_square_a84b60d7f474609a2772a1d4213bcc7d9}\label{class_square_a84b60d7f474609a2772a1d4213bcc7d9}} 
+\index{Square@{Square}!GetSideLength@{GetSideLength}}
+\index{GetSideLength@{GetSideLength}!Square@{Square}}
+\subsubsection{\texorpdfstring{GetSideLength()}{GetSideLength()}}
+{\footnotesize\ttfamily float Square\+::\+Get\+Side\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the side length of the \mbox{\hyperlink{class_square}{Square}}. 
+
+\begin{DoxyReturn}{Returns}
+The side length of the \mbox{\hyperlink{class_square}{Square}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_square_abf97ea232b41e2060eff7a3d8b1b60d2}\label{class_square_abf97ea232b41e2060eff7a3d8b1b60d2}} 
+\index{Square@{Square}!OverallDimension@{OverallDimension}}
+\index{OverallDimension@{OverallDimension}!Square@{Square}}
+\subsubsection{\texorpdfstring{OverallDimension()}{OverallDimension()}}
+{\footnotesize\ttfamily float Square\+::\+Overall\+Dimension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the overall dimension of the \mbox{\hyperlink{class_square}{Square}}. 
+
+\begin{DoxyReturn}{Returns}
+The overall dimension of the \mbox{\hyperlink{class_square}{Square}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a60aea90f45ea0f6d60cd749918728e16}{Shape}}.
+
+\mbox{\Hypertarget{class_square_a460111c0c374f9864d00316dcfe35dba}\label{class_square_a460111c0c374f9864d00316dcfe35dba}} 
+\index{Square@{Square}!Perimeter@{Perimeter}}
+\index{Perimeter@{Perimeter}!Square@{Square}}
+\subsubsection{\texorpdfstring{Perimeter()}{Perimeter()}}
+{\footnotesize\ttfamily float Square\+::\+Perimeter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the perimeter of the \mbox{\hyperlink{class_square}{Square}}. 
+
+\begin{DoxyReturn}{Returns}
+The perimeter of the \mbox{\hyperlink{class_square}{Square}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a27f450f44fc4f9a444600b5df6754c5f}{Shape}}.
+
+\mbox{\Hypertarget{class_square_a2ca9671502705098ec6dac551d437ebe}\label{class_square_a2ca9671502705098ec6dac551d437ebe}} 
+\index{Square@{Square}!SetSideLength@{SetSideLength}}
+\index{SetSideLength@{SetSideLength}!Square@{Square}}
+\subsubsection{\texorpdfstring{SetSideLength()}{SetSideLength()}}
+{\footnotesize\ttfamily bool Square\+::\+Set\+Side\+Length (\begin{DoxyParamCaption}\item[{float}]{side\+Length }\end{DoxyParamCaption})}
+
+
+
+Sets the side length of the \mbox{\hyperlink{class_square}{Square}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em side\+Length} & The side length to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the side length was set successfully, otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/muham/\+One\+Drive/\+Desktop/\+O\+O\+P/\+Shapes/\+Shapes/\mbox{\hyperlink{_square_8h}{Square.\+h}}\item 
+C\+:/\+Users/muham/\+One\+Drive/\+Desktop/\+O\+O\+P/\+Shapes/\+Shapes/Square.\+cpp\end{DoxyCompactItemize}

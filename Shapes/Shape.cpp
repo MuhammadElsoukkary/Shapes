@@ -1,25 +1,20 @@
-/// #include "Shape.h"
+/// \file Shape.cpp
+/// \brief Contains the implementation of the Shape class.
 
 #include "Shape.h"
 
-using namespace std;
-
-/// <summary>
-/// Default constructor for Shape class.
+/// \brief Default constructor for Shape class.
 /// Initializes name to "Unknown" and colour to "undefined".
-/// </summary>
 Shape::Shape(void)
 {
     name = "Unknown";
     colour = "undefined";
 }
 
-/// <summary>
-/// Parameterized constructor for Shape class.
+/// \brief Parameterized constructor for Shape class.
 /// Sets the name and colour of the shape if valid inputs are provided.
-/// </summary>
-/// <param name="name">The name of the shape.</param>
-/// <param name="colour">The colour of the shape.</param>
+/// \param name The name of the shape.
+/// \param colour The colour of the shape.
 Shape::Shape(string name, string colour)
 {
     if (name == "Circle" || name == "Square" || name == "Unknown")
@@ -42,29 +37,23 @@ Shape::Shape(string name, string colour)
     }
 }
 
-/// <summary>
-/// Retrieves the name of the shape.
-/// </summary>
-/// <returns>The name of the shape.</returns>
+/// \brief Retrieves the name of the shape.
+/// \return The name of the shape.
 string Shape::GetName()
 {
     return name;
 }
 
-/// <summary>
-/// Retrieves the colour of the shape.
-/// </summary>
-/// <returns>The colour of the shape.</returns>
+/// \brief Retrieves the colour of the shape.
+/// \return The colour of the shape.
 string Shape::GetColour()
 {
     return colour;
 }
 
-/// <summary>
-/// Sets the name of the shape if valid.
-/// </summary>
-/// <param name="name">The name to set.</param>
-/// <returns>True if name was set successfully, otherwise false.</returns>
+/// \brief Sets the name of the shape if valid.
+/// \param name The name to set.
+/// \return True if name was set successfully, otherwise false.
 bool Shape::SetName(string name)
 {
     if (name == "Circle" || name == "Square" || name == "Unknown")
@@ -79,11 +68,9 @@ bool Shape::SetName(string name)
     }
 }
 
-/// <summary>
-/// Sets the colour of the shape if valid.
-/// </summary>
-/// <param name="colour">The colour to set.</param>
-/// <returns>True if colour was set successfully, otherwise false.</returns>
+/// \brief Sets the colour of the shape if valid.
+/// \param colour The colour to set.
+/// \return True if colour was set successfully, otherwise false.
 bool Shape::SetColour(string colour)
 {
     if (colour == "red" || colour == "green" || colour == "blue" || colour == "yellow" || colour == "purple" || colour == "pink" || colour == "orange" || colour == "undefined" || colour.length() < MAXCHARFORCOLOUR)
@@ -98,32 +85,27 @@ bool Shape::SetColour(string colour)
     }
 }
 
-/// <summary>
-/// Calculates the perimeter of the shape.
-/// </summary>
-/// <returns>The perimeter of the shape.</returns>
+/// \brief Calculates the perimeter of the shape.
+/// \return The perimeter of the shape.
 float Shape::Perimeter(void) const
 {
     return 0.0f;
 }
 
-/// <summary>
-/// Calculates the area of the shape.
-/// </summary>
-/// <returns>The area of the shape.</returns>
+/// \brief Calculates the area of the shape.
+/// \return The area of the shape.
 float Shape::Area(void) const
 {
     return 0.0f;
 }
 
-/// <summary>
-/// Retrieves the overall dimension of the shape.
-/// </summary>
-/// <returns>The overall dimension of the shape.</returns>
+/// \brief Retrieves the overall dimension of the shape.
+/// \return The overall dimension of the shape.
 float Shape::OverallDimension(void) const
 {
     return 0.0f;
 }
+
 
 
 

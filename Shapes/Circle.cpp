@@ -1,7 +1,7 @@
-#include "Circle.h"
-
-/// \file Circle.h
+/// \file Circle.cpp
 /// \brief Contains the implementation of the Circle class.
+
+#include "Circle.h"
 
 /// \brief Constructor for Circle class with specified colour and radius.
 /// Initializes the Circle with the provided colour and radius, setting default values if necessary.
