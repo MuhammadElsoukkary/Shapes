@@ -14,6 +14,7 @@ public:
 	~Circle(void);
 	float GetRadius();
 	bool SetRadius(float radius);
+	void Show(void);
 
 protected:
 

@@ -31,14 +31,41 @@ Shape::Shape(string name, string colour)
 
 }
 
-string Shape::GetName (string name)
+string Shape::GetName()
 {
-	return string();
+	return name;
 }
 
-string Shape::GetColour(std::string colour)
+string Shape::GetColour()
 {
-	return string();
+	return colour;
+}
+
+bool Shape::SetName(string name)
+{
+	if (name == "Circle" || name == "Square" || name == "Unknown")
+	{
+		this->name = name;
+	}
+	else
+	{
+		this->name = "Unknown";
+	}
+}
+
+bool Shape::SetColour(string colour)
+{
+	if (colour == "red" || colour == "green" || colour == "blue" || colour == "yellow" || colour == "purple" || colour == "pink" || colour == "orange" || colour == "undefined" || colour.length() <= MAXCHARFORCOLOUR)
+	{
+		this->colour = colour;
+
+		return 
+	}
+	else
+	{
+		this->colour = "undefined";
+		return false;
+	}
 }
 
 

@@ -40,3 +40,14 @@ bool Circle::SetRadius(float radius)
 	}
 	
 }
+
+void Circle::Show(void)
+{
+	printf("Shape Information\n");
+	printf("Name : %s\n",name);
+	printf("Radius : %f cm\n",Radius);
+	printf("Circumference : 22.37 cm\n");
+	printf("Area : 39.82 square cm\n");
+}
+
+

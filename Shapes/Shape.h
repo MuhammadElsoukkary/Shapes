@@ -9,6 +9,7 @@
 #define MAXCHARFORCOLOUR 10
 
 const float DEFAULTVALUEFORSIDELENGTH = 0.00;
+const float PIE = 3.1415926;
 
 class Shape
 {
@@ -23,8 +24,8 @@ protected:
 public:
 	Shape();
 	Shape(string name, string colour);
-	string GetName(string name);
-	std::string GetColour(string colour);
+	string GetName();
+	std::string GetColour();
 	bool SetName(string name);
 	bool SetColour(string colour);
 	virtual void Perimeter(void);
