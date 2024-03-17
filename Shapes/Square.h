@@ -4,6 +4,7 @@
 
 #pragma once
 
+using namespace std;
 
 class Sqaure : public Shape
 {
@@ -12,7 +13,7 @@ private:
 
 public:
 	Sqaure(void);
-	Sqaure(std::string colour,float sideLength);
+	Sqaure(string colour,float sideLength);
 	~Sqaure(void);
 	float GetSideLength(float sideLength);
 	bool SetSideLength(float sideLength);

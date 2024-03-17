@@ -16,17 +16,17 @@ private:
 	
 
 protected:
-	std::string name;
-	std::string colour;
+	string name;
+	string colour;
    
 
 public:
 	Shape();
-	Shape(std::string name, std::string colour);
-	std::string GetName(std::string name);
-	std::string GetColour(std::string colour);
-	bool SetName(std::string name);
-	bool SetColour(std::string colour);
+	Shape(string name, string colour);
+	string GetName(string name);
+	std::string GetColour(string colour);
+	bool SetName(string name);
+	bool SetColour(string colour);
 	virtual void Perimeter(void);
 	virtual void Area(void); 
 	virtual void OverallDimension(void);

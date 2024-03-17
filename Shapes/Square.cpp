@@ -1,11 +1,13 @@
 #include "Square.h"
 
+using namespace std;
+
 Sqaure::Sqaure(void)
 {
 	sideLength = DEFAULTVALUEFORSIDELENGTH;
 }
 
-Sqaure::Sqaure(std::string colour, float sideLength)
+Sqaure::Sqaure(string colour, float sideLength)
 {
 	if (sideLength <= DEFAULTVALUEFORSIDELENGTH)
 	{

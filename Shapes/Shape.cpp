@@ -1,5 +1,7 @@
 #include "Shape.h"
 
+using namespace std;
+
 Shape::Shape(void)
 {
 	name = "Unknown";
@@ -7,7 +9,7 @@ Shape::Shape(void)
 }
 
 
-Shape::Shape(std::string name, std::string colour)
+Shape::Shape(string name, string colour)
 {
 	if (name == "Circle" || name == "Square" || name == "Unknown")
 	{
@@ -29,14 +31,14 @@ Shape::Shape(std::string name, std::string colour)
 
 }
 
-std::string Shape::GetName(std::string name)
+string Shape::GetName (string name)
 {
-	return std::string();
+	return string();
 }
 
-std::string Shape::GetColour(std::string colour)
+string Shape::GetColour(std::string colour)
 {
-	return std::string();
+	return string();
 }
 
 
