@@ -37,18 +37,32 @@ Shape::Shape(string name, string colour)
     }
 }
 
-/// \brief Retrieves the name of the shape.
+/// \brief Const acessor that retrieves the name of the shape.
 /// \return The name of the shape.
 string Shape::GetName() const
 {
     return name;
 }
 
-/// \brief Retrieves the colour of the shape.
+/// \brief Retrieves the name of the shape.
+/// \return The name of the shape.
+string Shape::GetName(void)
+{
+    return string();
+}
+
+/// \brief Const acessor that retrieves the colour of the shape.
 /// \return The colour of the shape.
 string Shape::GetColour() const
 {
     return colour;
+}
+
+/// \brief Retrieves the colour of the shape.
+/// \return The colour of the shape.
+string Shape::GetColour(void)
+{
+    return string();
 }
 
 /// \brief Sets the name of the shape if valid.

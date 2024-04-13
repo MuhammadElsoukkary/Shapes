@@ -41,7 +41,15 @@ Circle::~Circle(void)
 
 /// \brief Retrieves the radius of the Circle.
 /// \return The radius of the Circle.
-float Circle::GetRadius()
+float Circle::GetRadius(void)
+{
+    return radius;
+}
+
+
+/// \brief Const acessor that retrieves the radius of the Circle.
+/// \return The radius of the Circle
+float Circle::GetRadius(void) const
 {
     return radius;
 }
@@ -64,7 +72,7 @@ bool Circle::SetRadius(float Radius)
 }
 
 /// \brief Displays information about the Circle.
-void Circle::Show() {
+void Circle::Show(void) {
     printf("Shape Information\n");
     printf("Name          : %s\n", GetName().c_str());
     printf("Colour        : %s\n", GetColour().c_str());   

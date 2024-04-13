@@ -5,7 +5,7 @@
 
 /// \brief Default constructor for Square class.
 /// Initializes the Square with default values.
-Square::Square() : Shape("Square","undefined")
+Square::Square(void) : Shape("Square","undefined")
 {
     sideLength = DEFAULTVALUEFORSIDELENGTH;
 
@@ -42,9 +42,17 @@ Square::~Square()
 
 }
 
+/// \brief  Const acessor that retrieves the side length of the Square.
+/// \return The side length of the Square.
+float Square::GetSideLength(void) const {
+    return sideLength;
+}
+
+
 /// \brief Retrieves the side length of the Square.
 /// \return The side length of the Square.
-float Square::GetSideLength() const {
+float Square::GetSideLength(void)
+{
     return sideLength;
 }
 
@@ -64,7 +72,7 @@ bool Square::SetSideLength(float sideLength)
 }
 
 /// \brief Displays information about the Square.
-void Square::Show() const 
+void Square::Show(void) const 
 {
     
         printf("Shape Information\n");
@@ -133,7 +141,7 @@ bool Square::operator==(const Square& secondSquare) const
 
 /// \brief Calculates the perimeter of the Square.
 /// \return The perimeter of the Square.
-float Square::Perimeter() const
+float Square::Perimeter(void) const
 {
     float perimeter = 4 * sideLength;
     return perimeter;
@@ -141,7 +149,7 @@ float Square::Perimeter() const
 
 /// \brief Calculates the area of the Square.
 /// \return The area of the Square.
-float Square::Area() const
+float Square::Area(void) const
 {
     float area = sideLength * sideLength;
     return area;
@@ -149,7 +157,7 @@ float Square::Area() const
 
 /// \brief Retrieves the overall dimension of the Square.
 /// \return The overall dimension of the Square.
-float Square::OverallDimension() const
+float Square::OverallDimension(void) const
 {
     return sideLength;
 }

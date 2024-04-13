@@ -48,6 +48,11 @@ public:
     float GetRadius(void);
 
     /// <summary>
+  ///  Const acessor that retrieves the radius of the Circle.
+  /// </summary>
+  /// <returns>The radius of the Circle.</returns>
+    float GetRadius(void) const;
+    /// <summary>
     /// Sets the radius of the Circle.
     /// </summary>
     /// <param name="radius">The radius to set.</param>

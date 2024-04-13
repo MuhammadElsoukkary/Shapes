@@ -4,7 +4,7 @@
     PURPOSE :   This program manages geometric shapes like squares and circles.
                 Users can create, modify, and visualize shapes, specifying properties
                 such as colour and dimensions. It includes classes like Square and Circle
-                derived from the Shape class.
+                derived from the Shape class.IT now includes the cool feature of overloading operators to make new objects like a square and circle that take 
     AUTHOR  :   Muhammad Elsoukkary
     DATE    :  2024-03-04
     LICENSE :   [None]

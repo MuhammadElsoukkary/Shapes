@@ -33,7 +33,7 @@ private:
 public:
     /// \brief Default constructor for Shape class.
     /// Initializes name and colour to default values.
-    Shape();
+    Shape(void);
 
     /// \brief Parameterized constructor for Shape class.
     /// Initializes name and colour with provided values.
@@ -41,13 +41,22 @@ public:
     /// \param colour The colour of the shape.
     Shape(string name, string colour);
 
-    /// \brief Retrieves the name of the shape.
+    /// \brief Const acessor that retrieves the name of the shape.
     /// \return The name of the shape.
     string GetName(void) const;
 
-    /// \brief Retrieves the colour of the shape.
+
+    /// \brief Retrieves the name of the shape.
+    /// \return The name of the shape.
+    string GetName(void) ;
+
+    /// \brief Const acessor that retrieves the colour of the shape.
     /// \return The colour of the shape.
-    string GetColour() const;
+    string GetColour(void) const;
+
+    /// \brief  Retrieves the colour of the shape.
+  /// \return The colour of the shape.
+    string GetColour(void);
 
     /// \brief Sets the name of the shape.
     /// \param name The name to set.

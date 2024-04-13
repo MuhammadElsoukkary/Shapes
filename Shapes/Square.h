@@ -18,7 +18,7 @@ private:
 public:
     /// \brief Default constructor for Square class.
     /// Initializes the Square with default values.
-    Square();
+    Square(void);
 
     /// \brief Parameterized constructor for Square class.
     /// Initializes the Square with the specified colour and side length.
@@ -33,11 +33,15 @@ public:
     Square(const Square& secondSquare);
 
     /// \brief Destructor for Square class.
-    ~Square();
+    ~Square(void);
+
+    /// \brief Const acessor that retrieves the side length of the Square.
+    /// \return The side length of the Square.
+    float GetSideLength(void) const;
 
     /// \brief Retrieves the side length of the Square.
     /// \return The side length of the Square.
-    float GetSideLength() const;
+    float GetSideLength(void);
 
     /// \brief Sets the side length of the Square.
     /// \param sideLength The side length to set.
@@ -45,7 +49,7 @@ public:
     bool SetSideLength(float sideLength);
 
     /// \brief Displays information about the Square.
-    void Show() const;
+    void Show(void) const;
 
     /// \brief Overloads the assignment operator for the Square class.
 /// 
@@ -82,15 +86,15 @@ public:
 
     /// \brief Calculates the perimeter of the Square.
     /// \return The perimeter of the Square.
-    float Perimeter() const override;
+    float Perimeter(void) const override;
 
     /// \brief Calculates the area of the Square.
     /// \return The area of the Square.
-    float Area() const override;
+    float Area(void) const override;
 
     /// \brief Retrieves the overall dimension of the Square.
     /// \return The overall dimension of the Square.
-    float OverallDimension() const override;
+    float OverallDimension(void) const override;
 };
 
 
