@@ -7,6 +7,13 @@
 /// </summary>
 class Circle : public Shape
 {
+    /* -------------- CONSTANTS ------------- */
+    /* -------------- ATTRIBUTES ------------ */
+private:
+    float radius;///< radius of a circle
+
+
+    /* ---------- METHOD PROTOTYPES --------- */
 public:
     /// <summary>
     /// Constructor for Circle class with specified colour and radius.
@@ -21,6 +28,13 @@ public:
     /// Initializes the Circle with default values.
     /// </summary>
     Circle(void);
+
+
+    /// <summary>
+   /// Copy constructor for Circle class.
+   /// this constructor creates a new Circle object by copying the properties
+   /// </summary>
+    Circle(const Circle& rightHandSide);
 
     /// <summary>
     /// Destructor for Circle class.
@@ -47,13 +61,34 @@ public:
 
     
 
-    Circle operator+(const Circle& rhs) const;
+    /// <summary>
+/// Overloads the addition operator for Circle objects.
+/// </summary>
+/// <param name="rhs">The Circle object to add.</param>
+/// <returns>A new Circle object representing the sum of the radii.</returns>
+    Circle operator+(const Circle& rightHandSide) const;
 
-    Circle operator*(const Circle& rhs) const;
+    /// <summary>
+    /// Overloads the multiplication operator for Circle objects.
+    /// </summary>
+    /// <param name="rhs">The Circle object to multiply.</param>
+    /// <returns>A new Circle object representing the product of the radii.</returns>
+    Circle operator*(const Circle& rightHandSide) const;
 
-    Circle& operator=(const Circle& rhs);
+    /// <summary>
+    /// Overloads the assignment operator for Circle objects.
+    /// </summary>
+    /// <param name="rhs">The Circle object from which to assign properties.</param>
+    /// <returns>A reference to this Circle object after assignment.</returns>
+    Circle& operator=(const Circle& rightHandSide);
 
-    bool operator==(const Circle& rhs) const;
+    /// <summary>
+    /// Overloads the equality operator for Circle objects.
+    /// </summary>
+    /// <param name="rhs">The Circle object to compare with.</param>
+    /// <returns>True if the Circle objects are equal, otherwise false.</returns>
+    bool operator==(const Circle& rightHandSide) const;
+
 
     /// <summary>
     /// Calculates the perimeter of the Circle.
@@ -73,7 +108,6 @@ public:
     /// <returns>The overall dimension of the Circle.</returns>
     float OverallDimension(void) const override;
 
-private:
-    float radius;/// radius of a circle
+
 };
 

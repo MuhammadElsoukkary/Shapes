@@ -26,11 +26,17 @@ Circle::Circle(void) :Shape("Circle", "undefined")
     radius = DEFAULTVALUEFORSIDELENGTH;
 }
 
+Circle::Circle(const Circle& rightHandSide) : Shape(rightHandSide) 
+{
+    this->radius = rightHandSide.radius;
+}
+
+
 /// \brief Destructor for Circle class.
 /// Displays a message when the Circle object is destroyed.
 Circle::~Circle(void)
 {
-    printf("The circle is broken ...");
+    printf("The circle is broken ...\n");
 }
 
 /// \brief Retrieves the radius of the Circle.
@@ -70,35 +76,57 @@ void Circle::Show() {
 
 
 
-
-// Overloading the addition operator
-Circle Circle::operator+(const Circle& rhs) const
+/// \brief Overloads the addition operator for Circle objects.
+/// 
+/// This operator performs addition of two Circle objects by adding their radii.
+/// 
+/// \param rightHandSide The Circle object to add.
+/// \return A new Circle object representing the sum of the two Circle objects.
+Circle Circle::operator+(const Circle& rightHandSide) const
 {
-    float newRadius = this->radius + rhs.radius;
+    float newRadius = this->radius + rightHandSide.radius;
     return Circle(this->GetColour(), newRadius);
 }
 
-// Overloading the multiplication operator
-Circle Circle::operator*(const Circle& rhs) const
+/// \brief Overloads the multiplication operator for Circle objects.
+/// 
+/// This operator performs multiplication of two Circle objects by multiplying their radii.
+/// 
+/// \param rightHandSide The Circle object to multiply.
+/// \return A new Circle object representing the product of the two Circle objects.
+Circle Circle::operator*(const Circle& rightHandSide) const
 {
-    float newRadius = this->radius * rhs.radius;
-    return Circle(rhs.GetColour(), newRadius);
+    float newRadius = this->radius * rightHandSide.radius;
+    return Circle(rightHandSide.GetColour(), newRadius);
 }
 
-// Overloading the assignment operator
-Circle& Circle::operator=(const Circle& rhs) {
-    if (this != &rhs) {
-        this->Shape::operator=(rhs);
-        this->radius = rhs.radius;
+/// \brief Overloads the assignment operator for Circle objects.
+/// 
+/// This operator assigns the properties of another Circle object to this Circle object.
+/// 
+/// \param rightHandSide The Circle object from which to assign properties.
+/// \return A reference to this Circle object after assignment.
+Circle& Circle::operator=(const Circle& rightHandSide)
+{
+    if (this != &rightHandSide) {
+        this->Shape::operator=(rightHandSide);
+        this->radius = rightHandSide.radius;
     }
     return *this;
 }
 
-// Overloading the equality operator
-bool Circle::operator==(const Circle& rhs) const {
+/// \brief Overloads the equality operator for Circle objects.
+/// 
+/// This operator checks if two Circle objects are equal based on their radii and color.
+/// 
+/// \param rightHandSide The Circle object to compare with.
+/// \return True if the Circle objects are equal, otherwise false.
+bool Circle::operator==(const Circle& rightHandSide) const
+{
     const float EPSILON = 0.01; // Small variance for floating-point comparison
-    return (std::abs(this->radius - rhs.radius) < EPSILON) && (this->GetColour() == rhs.GetColour());
+    return (std::abs(this->radius - rightHandSide.radius) < EPSILON) && (this->GetColour() == rightHandSide.GetColour());
 }
+
 
 
 

@@ -9,10 +9,12 @@
 /// \brief Represents a square shape.
 class Square : public Shape 
 {
+    /* -------------- CONSTANTS ------------- */
+    /* -------------- ATTRIBUTES ------------ */
 private:
     float sideLength; ///< Length of each side of the square
     
-
+    /* ---------- METHOD PROTOTYPES --------- */
 public:
     /// \brief Default constructor for Square class.
     /// Initializes the Square with default values.
@@ -23,6 +25,12 @@ public:
     /// \param colour The colour of the Square.
     /// \param sideLength The side length of the Square.
     Square(std::string colour, float sideLength);
+
+
+    /// \brief Copy constructor for Square class.
+    /// Initializes a new Square by copying the properties of another Square.
+    /// \param secondSquare The Square object to be copied.
+    Square(const Square& secondSquare);
 
     /// \brief Destructor for Square class.
     ~Square();
@@ -39,13 +47,38 @@ public:
     /// \brief Displays information about the Square.
     void Show() const;
 
-    Square& operator=(const Square& other);
+    /// \brief Overloads the assignment operator for the Square class.
+/// 
+/// This operator assigns the properties of another Square object to this Square object.
+/// 
+/// \param other The Square object from which to assign properties.
+/// \return A reference to this Square object after assignment.
+    Square& operator=(const Square& secondSquare);
 
-    Square operator+(const Square& other) const;
+    /// \brief Overloads the addition operator for the Square class.
+    /// 
+    /// This operator performs addition of two Square objects.
+    /// 
+    /// \param other The Square object to add.
+    /// \return A new Square object representing the sum of the two Square objects.
+    Square operator+(const Square& secondSquare) const;
 
-    Square operator*(const Square& other) const;
+    /// \brief Overloads the multiplication operator for the Square class.
+    /// 
+    /// This operator performs multiplication of two Square objects.
+    /// 
+    /// \param other The Square object to multiply.
+    /// \return A new Square object representing the product of the two Square objects.
+    Square operator*(const Square& secondSquare) const;
 
-    bool operator==(const Square& other) const;
+    /// \brief Overloads the equality operator for the Square class.
+    /// 
+    /// This operator checks if two Square objects are equal based on their properties.
+    /// 
+    /// \param other The Square object to compare with.
+    /// \return True if the Square objects are equal, otherwise false.
+    bool operator==(const Square& secondSquare) const;
+
 
     /// \brief Calculates the perimeter of the Square.
     /// \return The perimeter of the Square.

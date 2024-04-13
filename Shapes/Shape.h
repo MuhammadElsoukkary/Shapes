@@ -21,13 +21,15 @@ const double PIE = 3.1415926; // Value of pi
 /// \brief Represents a geometric shape.
 class Shape
 {
+    /* -------------- CONSTANTS ------------- */
+    /* -------------- ATTRIBUTES ------------ */
 private:
-    std::string name; // Name of the shape
-   std::string colour; // Colour of the shape
+    std::string name; ///< Name of the shape
+   std::string colour; ///< Colour of the shape
 
-protected:
+
    
-
+    /* ---------- METHOD PROTOTYPES --------- */
 public:
     /// \brief Default constructor for Shape class.
     /// Initializes name and colour to default values.

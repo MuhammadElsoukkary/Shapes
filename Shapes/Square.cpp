@@ -16,19 +16,30 @@ Square::Square() : Shape("Square","undefined")
 /// \param colour The colour of the Square.
 /// \param sideLength The side length of the Square.
 Square::Square(string colour, float sideLength) : Shape("Square", colour) {
-    if (sideLength >= DEFAULTVALUEFORSIDELENGTH) {
+
+    if (sideLength >= DEFAULTVALUEFORSIDELENGTH) 
+    {
         this->sideLength = sideLength;
     }
-    else {
+    else 
+    {
         this->sideLength = DEFAULTVALUEFORSIDELENGTH;
     }
 }
+
+
+Square::Square(const Square& secondSquare) : Shape(secondSquare) 
+{
+    this->sideLength = secondSquare.sideLength;
+}
+
 
 /// \brief Destructor for Square class.
 /// Displays a message when the Square object is destroyed.
 Square::~Square()
 {
-    cout << "The square is squished ..." << endl;
+    printf("The square is squished ...\n");
+
 }
 
 /// \brief Retrieves the side length of the Square.
@@ -40,8 +51,10 @@ float Square::GetSideLength() const {
 /// \brief Sets the side length of the Square.
 /// \param sideLength The side length to set.
 /// \return True if the side length was set successfully, otherwise false.
-bool Square::SetSideLength(float sideLength) {
-    if (sideLength >= DEFAULTVALUEFORSIDELENGTH) {
+bool Square::SetSideLength(float sideLength) 
+{
+    if (sideLength >= DEFAULTVALUEFORSIDELENGTH) 
+    {
         return false;
     }
     else {
@@ -62,32 +75,56 @@ void Square::Show() const
         printf("Area          : %.2f square cm\n", Area());
 }
 
-
-// Operator Overloads
-Square& Square::operator=(const Square& other)
+/// \brief Assignment operator for the Square class.
+/// 
+/// This operator assigns the properties of another Square object to this Square object.
+/// 
+/// \param secondSquare The Square object from which to assign properties.
+/// \return A reference to this Square object after assignment.
+Square& Square::operator=(const Square& secondSquare)
 {
-    if (this != &other) {
-        SetColour(other.GetColour()); // Assuming Shape has a SetColour method
-        sideLength = other.sideLength;
+    if (this != &secondSquare) {
+        SetColour(secondSquare.GetColour()); ///< Assuming Shape has a SetColour method
+        sideLength = secondSquare.sideLength;
     }
     return *this;
 }
 
-Square Square::operator+(const Square& other) const
+/// \brief Addition operator for the Square class.
+/// 
+/// This operator performs addition of two Square objects.
+/// 
+/// \param secondSquare The Square object to add.
+/// \return A new Square object representing the sum of the two Square objects.
+Square Square::operator+(const Square& secondSquare) const
 {
-    return Square(GetColour(), sideLength + other.sideLength);
+    return Square(GetColour(), sideLength + secondSquare.sideLength);
 }
 
-Square Square::operator*(const Square& other) const
+/// \brief Multiplication operator for the Square class.
+/// 
+/// This operator performs multiplication of two Square objects.
+/// 
+/// \param secondSquare The Square object to multiply.
+/// \return A new Square object representing the product of the two Square objects.
+Square Square::operator*(const Square& secondSquare) const
 {
-    return Square(other.GetColour(), sideLength * other.sideLength);
+    return Square(secondSquare.GetColour(), sideLength * secondSquare.sideLength);
 }
 
-bool Square::operator==(const Square& other) const
+/// \brief Equality operator for the Square class.
+/// 
+/// This operator checks if two Square objects are equal based on their color and side length.
+/// 
+/// \param secondSquare The Square object to compare with.
+/// \return True if the Square objects are equal, otherwise false.
+bool Square::operator==(const Square& secondSquare) const
 {
-    return (GetColour() == other.GetColour() &&
-        fabs(sideLength - other.sideLength) < 0.01); // Example tolerance
+    return (GetColour() == secondSquare.GetColour() &&
+        fabs(sideLength - secondSquare.sideLength) < 0.01); // Example tolerance
 }
+
+
 
 
 
