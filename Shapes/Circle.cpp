@@ -7,11 +7,11 @@
 /// Initializes the Circle with the provided colour and radius, setting default values if necessary.
 /// \param colour The colour of the Circle.
 /// \param radius The radius of the Circle.
-Circle::Circle(string colour, float Radius) : Shape("Circle", colour)
+Circle::Circle(string colour, float radius) : Shape("Circle", colour)
 {
     if (radius >= DEFAULTVALUEFORSIDELENGTH)
     {
-        this->radius = Radius;
+        this->radius = radius;
     }
     else
     {
@@ -21,7 +21,7 @@ Circle::Circle(string colour, float Radius) : Shape("Circle", colour)
 
 /// \brief Default constructor for Circle class.
 /// Initializes the Circle with default values.
-Circle::Circle(void) :Shape()
+Circle::Circle(void) :Shape("Circle", "undefined")
 {
     radius = DEFAULTVALUEFORSIDELENGTH;
 }
@@ -60,12 +60,48 @@ bool Circle::SetRadius(float Radius)
 /// \brief Displays information about the Circle.
 void Circle::Show() {
     printf("Shape Information\n");
-    std::cout << "Name: " << name << std::endl;
-    std::cout << "Colour: " << colour << std::endl;
-    printf("Radius: %f cm\n", radius);
-    printf("Circumference: %f cm\n", Perimeter()); // Call the Perimeter() method to get the circumference
-    printf("Area: %f square cm\n", Area()); // Call the Area() method to get the area
+    printf("Name          : %s\n", GetName().c_str());
+    printf("Colour        : %s\n", GetColour().c_str());   
+    printf("Radius        : %.2f cm\n", radius);
+    printf("Circumference : %.2f cm\n", Perimeter()); 
+    printf("Area          : %.2f square cm\n", Area()); 
+
 }
+
+
+
+
+// Overloading the addition operator
+Circle Circle::operator+(const Circle& rhs) const
+{
+    float newRadius = this->radius + rhs.radius;
+    return Circle(this->GetColour(), newRadius);
+}
+
+// Overloading the multiplication operator
+Circle Circle::operator*(const Circle& rhs) const
+{
+    float newRadius = this->radius * rhs.radius;
+    return Circle(rhs.GetColour(), newRadius);
+}
+
+// Overloading the assignment operator
+Circle& Circle::operator=(const Circle& rhs) {
+    if (this != &rhs) {
+        this->Shape::operator=(rhs);
+        this->radius = rhs.radius;
+    }
+    return *this;
+}
+
+// Overloading the equality operator
+bool Circle::operator==(const Circle& rhs) const {
+    const float EPSILON = 0.01; // Small variance for floating-point comparison
+    return (std::abs(this->radius - rhs.radius) < EPSILON) && (this->GetColour() == rhs.GetColour());
+}
+
+
+
 
 /// \brief Calculates the perimeter of the Circle.
 /// \return The perimeter of the Circle.

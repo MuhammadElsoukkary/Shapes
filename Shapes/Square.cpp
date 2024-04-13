@@ -5,8 +5,10 @@
 
 /// \brief Default constructor for Square class.
 /// Initializes the Square with default values.
-Square::Square() : Shape() {
+Square::Square() : Shape("Square","undefined")
+{
     sideLength = DEFAULTVALUEFORSIDELENGTH;
+
 }
 
 /// \brief Parameterized constructor for Square class.
@@ -49,14 +51,48 @@ bool Square::SetSideLength(float sideLength) {
 }
 
 /// \brief Displays information about the Square.
-void Square::Show() const {
-    cout << "Shape Information" << endl;
-    cout << "Name: " << name << endl;
-    cout << "Colour: " << colour << endl;
-    cout << "Side-Length: " << sideLength << " cm" << endl;
-    cout << "Perimeter: " << Perimeter() << " cm" << endl;
-    cout << "Area: " << Area() << " square cm" << endl;
+void Square::Show() const 
+{
+    
+        printf("Shape Information\n");
+        printf("Name          : %s\n", GetName().c_str());
+        printf("Colour        : %s\n", GetColour().c_str());
+        printf("Side-Length   : %.2f cm\n", sideLength);
+        printf("Perimeter     : %.2f cm\n", Perimeter());
+        printf("Area          : %.2f square cm\n", Area());
 }
+
+
+// Operator Overloads
+Square& Square::operator=(const Square& other)
+{
+    if (this != &other) {
+        SetColour(other.GetColour()); // Assuming Shape has a SetColour method
+        sideLength = other.sideLength;
+    }
+    return *this;
+}
+
+Square Square::operator+(const Square& other) const
+{
+    return Square(GetColour(), sideLength + other.sideLength);
+}
+
+Square Square::operator*(const Square& other) const
+{
+    return Square(other.GetColour(), sideLength * other.sideLength);
+}
+
+bool Square::operator==(const Square& other) const
+{
+    return (GetColour() == other.GetColour() &&
+        fabs(sideLength - other.sideLength) < 0.01); // Example tolerance
+}
+
+
+
+
+
 
 /// \brief Calculates the perimeter of the Square.
 /// \return The perimeter of the Square.

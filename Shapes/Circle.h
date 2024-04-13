@@ -31,7 +31,7 @@ public:
     /// Retrieves the radius of the Circle.
     /// </summary>
     /// <returns>The radius of the Circle.</returns>
-    float GetRadius();
+    float GetRadius(void);
 
     /// <summary>
     /// Sets the radius of the Circle.
@@ -44,6 +44,16 @@ public:
     /// Displays information about the Circle.
     /// </summary>
     void Show(void);
+
+    
+
+    Circle operator+(const Circle& rhs) const;
+
+    Circle operator*(const Circle& rhs) const;
+
+    Circle& operator=(const Circle& rhs);
+
+    bool operator==(const Circle& rhs) const;
 
     /// <summary>
     /// Calculates the perimeter of the Circle.

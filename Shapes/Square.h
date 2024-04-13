@@ -7,9 +7,11 @@
 
 /// \class Square
 /// \brief Represents a square shape.
-class Square : public Shape {
+class Square : public Shape 
+{
 private:
     float sideLength; ///< Length of each side of the square
+    
 
 public:
     /// \brief Default constructor for Square class.
@@ -36,6 +38,14 @@ public:
 
     /// \brief Displays information about the Square.
     void Show() const;
+
+    Square& operator=(const Square& other);
+
+    Square operator+(const Square& other) const;
+
+    Square operator*(const Square& other) const;
+
+    bool operator==(const Square& other) const;
 
     /// \brief Calculates the perimeter of the Square.
     /// \return The perimeter of the Square.

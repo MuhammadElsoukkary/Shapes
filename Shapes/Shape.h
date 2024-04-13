@@ -22,11 +22,11 @@ const double PIE = 3.1415926; // Value of pi
 class Shape
 {
 private:
-    // No private members
+    std::string name; // Name of the shape
+   std::string colour; // Colour of the shape
 
 protected:
-    std::string name; // Name of the shape
-    std::string colour; // Colour of the shape
+   
 
 public:
     /// \brief Default constructor for Shape class.
@@ -41,11 +41,11 @@ public:
 
     /// \brief Retrieves the name of the shape.
     /// \return The name of the shape.
-    string GetName(void);
+    string GetName(void) const;
 
     /// \brief Retrieves the colour of the shape.
     /// \return The colour of the shape.
-    string GetColour();
+    string GetColour() const;
 
     /// \brief Sets the name of the shape.
     /// \param name The name to set.
@@ -59,15 +59,15 @@ public:
 
     /// \brief Calculates the perimeter of the shape.
     /// \return The perimeter of the shape.
-    virtual float Perimeter(void) const;
+    virtual float Perimeter(void) const = 0;
 
     /// \brief Calculates the area of the shape.
     /// \return The area of the shape.
-    virtual float Area(void) const;
+    virtual float Area(void) const = 0;
 
     /// \brief Retrieves the overall dimension of the shape.
     /// \return The overall dimension of the shape.
-    virtual float OverallDimension(void) const;
+    virtual float OverallDimension(void) const = 0;
 };
 
 #endif

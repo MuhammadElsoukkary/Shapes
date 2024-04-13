@@ -39,14 +39,14 @@ Shape::Shape(string name, string colour)
 
 /// \brief Retrieves the name of the shape.
 /// \return The name of the shape.
-string Shape::GetName()
+string Shape::GetName() const
 {
     return name;
 }
 
 /// \brief Retrieves the colour of the shape.
 /// \return The colour of the shape.
-string Shape::GetColour()
+string Shape::GetColour() const
 {
     return colour;
 }
@@ -85,26 +85,9 @@ bool Shape::SetColour(string colour)
     }
 }
 
-/// \brief Calculates the perimeter of the shape.
-/// \return The perimeter of the shape.
-float Shape::Perimeter(void) const
-{
-    return 0.0f;
-}
 
-/// \brief Calculates the area of the shape.
-/// \return The area of the shape.
-float Shape::Area(void) const
-{
-    return 0.0f;
-}
 
-/// \brief Retrieves the overall dimension of the shape.
-/// \return The overall dimension of the shape.
-float Shape::OverallDimension(void) const
-{
-    return 0.0f;
-}
+
 
 
 
